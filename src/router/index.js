@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import { index, login, showIcon } from '@/views'
+import { index, login, showIcon, addCategory } from '@/views'
 Vue.use(VueRouter)
 
 const routes = [
@@ -23,7 +23,13 @@ const routes = [
     path: '/showIcon',
     name: 'showIcon',
     component: showIcon
+  },
+  {
+    path: '/addCategory',
+    name: 'addCategory',
+    component: addCategory
   }
+
 ]
 
 const router = new VueRouter({

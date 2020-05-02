@@ -27,13 +27,20 @@ export default {
     indexSearch
   },
   mounted () {
-    getCategoryList().then(res => {
-      this.categoryList = res.data.data
-    })
+    if (window.localStorage.getItem('categoryList')) {
+      this.categoryList = JSON.parse(window.localStorage.getItem('categoryList'))
+    } else {
+      getCategoryList().then(res => {
+        this.categoryList = res.data.data
+        // 储存到本地
+        window.localStorage.setItem('categoryList', JSON.stringify(res.data.data))
+      })
+    }
+
     document.querySelector('.van-sticky').onclick = e => {
       console.log(e.target.className)
       if (e.target.className === 'van-sticky') {
-
+        this.$router.push({ name: 'addCategory' })
       }
     }
   }
