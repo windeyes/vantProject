@@ -61,8 +61,8 @@ export default {
             this.$toast(res.data.message)
           } else {
             this.$router.push('/index')
-            window.localStorage.setItem('token', res.data.token)
-            window.localStorage.setItem('user', res.data.user)
+            window.localStorage.setItem('token', res.data.data.token)
+            window.localStorage.setItem('user', res.data.data.user)
           }
         })
       }

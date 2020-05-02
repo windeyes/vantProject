@@ -6,3 +6,9 @@ export const login = (data) => {
     data
   })
 }
+export const getCategoryList = () => {
+  return axios({
+    url: '/category'
+
+  })
+}
