@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import { index } from '@/views'
+import { index, login, showIcon } from '@/views'
 Vue.use(VueRouter)
 
 const routes = [
@@ -13,6 +13,16 @@ const routes = [
     path: '/index',
     name: 'index',
     component: index
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: login
+  },
+  {
+    path: '/showIcon',
+    name: 'showIcon',
+    component: showIcon
   }
 ]
 

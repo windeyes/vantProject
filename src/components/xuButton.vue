@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <!-- 顶部搜索ks -->
-
-    <!-- 顶部搜索js -->
+  <div class="button_container">
 
   </div>
 </template>

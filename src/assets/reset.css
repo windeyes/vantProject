@@ -45,3 +45,7 @@ table {
 #app{
 	width: 100%;
 }
+input{
+	outline: none;
+	border:none;
+}
